@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Pink celebration cake">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff9f7"/>
+      <stop offset=".55" stop-color="#f6d8dd"/>
+      <stop offset="1" stop-color="#e7efe3"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <ellipse cx="450" cy="915" rx="315" ry="90" fill="#4a2c25" opacity=".14"/>
+  <path d="M250 420h500v500c0 115-500 115-500 0z" fill="#ffdbe5"/>
+  <ellipse cx="500" cy="420" rx="250" ry="80" fill="#fff9f7"/>
+  <path d="M250 420c86 80 146 28 210 80 82 67 166 52 290-80v110c-112 78-230 83-350 22-73-37-102 33-150-22z" fill="#f5a8bd"/>
+  <circle cx="365" cy="285" r="52" fill="#b44c63"/>
+  <circle cx="500" cy="255" r="62" fill="#fff9f7"/>
+  <circle cx="632" cy="290" r="48" fill="#c69b54"/>
+  <path d="M370 635c85 42 172 42 260 0" fill="none" stroke="#b44c63" stroke-width="24" stroke-linecap="round"/>
+  <text x="450" y="760" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#4a2c25">Celebration</text>
+</svg>

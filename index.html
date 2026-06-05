@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cakelush By Samriddhi | Custom Cakes in Bhopal</title>
+  <meta name="description" content="Made to order cakes, baked cheesecake, mawa cake, and celebration cakes by Cakelush By Samriddhi in Bhopal.">
+  <style>
+    :root {
+      --ink: #201817;
+      --muted: #725f5b;
+      --paper: #fff9f7;
+      --blush: #f6d8dd;
+      --rose: #b44c63;
+      --sage: #dbe6d4;
+      --mint: #8da58b;
+      --cocoa: #4a2c25;
+      --gold: #c69b54;
+      --line: rgba(32, 24, 23, 0.14);
+      --shadow: 0 24px 80px rgba(54, 30, 27, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(120deg, rgba(246, 216, 221, 0.58), rgba(255, 249, 247, 0.88) 34%, rgba(219, 230, 212, 0.52)),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 249, 247, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(180, 76, 99, 0.26);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 25%, #fff 0 22%, #f6d8dd 23% 62%, #dbe6d4 63%);
+      color: var(--cocoa);
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+
+    .brand strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.05;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(32, 24, 23, 0.2);
+    }
+
+    .button.alt {
+      background: rgba(255, 255, 255, 0.54);
+      color: var(--ink);
+      border-color: var(--line);
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      padding: 44px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid rgba(180, 76, 99, 0.22);
+      border-radius: 999px;
+      color: var(--rose);
+      background: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    h1 {
+      margin: 18px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(52px, 8vw, 116px);
+      line-height: 0.86;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 580px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0;
+    }
+
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+
+    .proof div {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.42);
+    }
+
+    .proof strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--cocoa);
+    }
+
+    .proof span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-art {
+      min-height: 640px;
+      display: grid;
+      grid-template-columns: 1fr 0.78fr;
+      grid-template-rows: 1fr 0.68fr;
+      gap: 14px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .photo::before,
+    .tile::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.92) 0 8%, transparent 9%),
+        radial-gradient(ellipse at 50% 62%, rgba(255, 255, 255, 0.9) 0 19%, transparent 20%),
+        radial-gradient(ellipse at 50% 78%, rgba(246, 216, 221, 0.96) 0 32%, transparent 33%),
+        linear-gradient(140deg, rgba(180, 76, 99, 0.22), rgba(219, 230, 212, 0.9));
+      z-index: 0;
+    }
+
+    .photo:nth-child(2)::before,
+    .tile:nth-child(2)::before,
+    .tile:nth-child(5)::before {
+      background:
+        radial-gradient(circle at 52% 24%, rgba(198, 155, 84, 0.54) 0 6%, transparent 7%),
+        radial-gradient(ellipse at 50% 58%, rgba(255, 255, 255, 0.94) 0 18%, transparent 19%),
+        radial-gradient(ellipse at 50% 76%, rgba(219, 230, 212, 0.95) 0 31%, transparent 32%),
+        linear-gradient(140deg, rgba(141, 165, 139, 0.28), rgba(255, 249, 247, 0.92));
+    }
+
+    .photo:nth-child(3)::before,
+    .tile:nth-child(3)::before,
+    .tile:nth-child(4)::before {
+      background:
+        radial-gradient(circle at 51% 26%, rgba(255, 255, 255, 0.88) 0 7%, transparent 8%),
+        radial-gradient(ellipse at 50% 58%, rgba(74, 44, 37, 0.94) 0 18%, transparent 19%),
+        radial-gradient(ellipse at 50% 77%, rgba(117, 69, 54, 0.88) 0 31%, transparent 32%),
+        linear-gradient(140deg, rgba(246, 216, 221, 0.72), rgba(198, 155, 84, 0.22));
+    }
+
+    .photo img {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 220ms ease;
+    }
+
+    .photo img.failed,
+    .tile img.failed {
+      opacity: 0;
+    }
+
+    .photo.main {
+      grid-row: span 2;
+    }
+
+    .photo .tag {
+      position: absolute;
+      z-index: 2;
+      left: 14px;
+      bottom: 14px;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255, 249, 247, 0.86);
+      color: var(--cocoa);
+      font-size: 12px;
+      font-weight: 800;
+      backdrop-filter: blur(12px);
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      margin: 0;
+      max-width: 720px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .menu-card {
+      min-height: 210px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .menu-card:nth-child(2) {
+      background: rgba(219, 230, 212, 0.5);
+    }
+
+    .menu-card:nth-child(3) {
+      background: rgba(246, 216, 221, 0.58);
+    }
+
+    .menu-card h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, serif;
+      font-size: 26px;
+    }
+
+    .menu-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .tile {
+      min-height: 300px;
+      grid-column: span 4;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+      box-shadow: 0 18px 46px rgba(54, 30, 27, 0.1);
+    }
+
+    .tile.wide {
+      grid-column: span 8;
+    }
+
+    .tile.tall {
+      min-height: 500px;
+      grid-row: span 2;
+    }
+
+    .tile img {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .tile:hover img {
+      transform: scale(1.04);
+    }
+
+    .tile span {
+      position: absolute;
+      z-index: 2;
+      left: 16px;
+      bottom: 16px;
+      right: 16px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(32, 24, 23, 0.76);
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+      backdrop-filter: blur(12px);
+    }
+
+    .order {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      padding: clamp(24px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.58);
+      box-shadow: 0 18px 60px rgba(54, 30, 27, 0.1);
+    }
+
+    .panel h2 {
+      font-size: clamp(34px, 4.4vw, 56px);
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .step b {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .step span {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(32, 24, 23, 0.18);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(180, 76, 99, 0.12);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .small-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .quote-band {
+      padding: 80px 0;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .quote-band .shell {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .quote-band h2 {
+      max-width: 880px;
+      color: #fff;
+    }
+
+    .quote-band p {
+      max-width: 360px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 34px 0 48px;
+      color: var(--muted);
+    }
+
+    footer .shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .floating-order {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .navlinks a:not(.button) {
+        display: none;
+      }
+
+      .hero-grid,
+      .order,
+      .quote-band .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-art {
+        min-height: 560px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tile,
+      .tile.wide {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .brand > span:not(.mark) {
+        display: none;
+      }
+
+      .brand .mark {
+        display: grid;
+      }
+
+      .navlinks .button {
+        min-height: 40px;
+        padding: 0 13px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-art {
+        grid-template-columns: 1fr 1fr;
+        min-height: 420px;
+        gap: 10px;
+      }
+
+      .proof,
+      .menu-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .tile,
+      .tile.wide,
+      .tile.tall {
+        grid-column: span 12;
+        min-height: 360px;
+      }
+
+      footer .shell {
+        display: grid;
+      }
+
+      .floating-order {
+        display: inline-flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Cakelush home">
+        <span class="mark">CL</span>
+        <span>
+          <strong>Cakelush By Samriddhi</strong>
+          <span>Made to order in Bhopal</span>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="#cakes">Cakes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#order">Order</a>
+        <a class="button" href="https://www.instagram.com/_.cakelush" target="_blank" rel="noreferrer">Instagram DM</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <span class="eyebrow">Home bakery in Bhopal</span>
+          <h1>Cakelush By Samriddhi</h1>
+          <p class="lead">Custom cakes with soft detail, clean finishes, and the kind of flavour people remember after the celebration is over.</p>
+          <div class="actions">
+            <a class="button" href="#order">Start an order</a>
+            <a class="button alt" href="#gallery">See recent cakes</a>
+          </div>
+          <div class="proof" aria-label="Business highlights">
+            <div>
+              <strong>346</strong>
+              <span>cake posts</span>
+            </div>
+            <div>
+              <strong>1 day</strong>
+              <span>prior booking</span>
+            </div>
+            <div>
+              <strong>Bhopal</strong>
+              <span>made to order</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Recent Cakelush cake photos">
+          <figure class="photo main">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/705988625_18066040007704690_3051897537359903938_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=2ECmQOLw-NYQ7kNvwGSTaNa&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=MzkwNjUwNjEwMzAxMDA0NDc5MQ%3D%3D.3-ccb7-5&amp;oh=00_Af8Fjs_17-R1mjvPnRRhYf4GC00iW02bW3curxYNCp1INQ&amp;oe=6A28A6F1&amp;_nc_sid=8b3546" alt="Peppa Pig custom cake by Cakelush">
+            <span class="tag">Custom character cakes</span>
+          </figure>
+          <figure class="photo">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/689017396_18063190190704690_3179009316818227460_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=_VLXoZIvco0Q7kNvwGOpnq8&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg5MTU3MzkyNzAyNjIwNzUyMg%3D%3D.3-ccb7-5&amp;oh=00_Af-BrkqEb8-9G1TsIgInh5lKYhYMWu4QHOeOEVBkxo53WQ&amp;oe=6A28ADEC&amp;_nc_sid=8b3546" alt="Heart shaped baked cheesecake by Cakelush">
+            <span class="tag">Baked cheesecake</span>
+          </figure>
+          <figure class="photo">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/687663309_18062638865704690_4379727536043516171_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=lTj9NQuibksQ7kNvwGQ68vY&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg4ODYxMzYzNTMyOTQxODU1NQ%3D%3D.3-ccb7-5&amp;oh=00_Af88dbj4_XFG3skWYZg1AzWjL10uOegu_nSWn1sz0cgwvA&amp;oe=6A289F29&amp;_nc_sid=8b3546" alt="Chocolate overload cake by Cakelush">
+            <span class="tag">Chocolate overload</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="cakes">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Designed for birthdays, family tables, and last minute love.</h2>
+          <p>Every cake is baked at home, made after the order is placed, and finished for the person you are celebrating.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Signature cakes</h3>
+            <p>Fresh cream cakes, floral finishes, soft colour palettes, names, ages, and clean celebration styling.</p>
+          </article>
+          <article class="menu-card">
+            <h3>Theme cakes</h3>
+            <p>Character cakes, playful details, and photo inspired designs for kids, friends, and family.</p>
+          </article>
+          <article class="menu-card">
+            <h3>Cheesecakes</h3>
+            <p>Heart shaped baked cheesecake and rich dessert cakes for smaller, polished gatherings.</p>
+          </article>
+          <article class="menu-card">
+            <h3>Classic bakes</h3>
+            <p>Mawa cake and chocolate overload cakes for comfort, gifting, and everyone who wants a full slice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Recent work from the Cakelush kitchen.</h2>
+          <p>These are real cakes from the Instagram page, chosen to show the range of colours, shapes, and finishes.</p>
+        </div>
+        <div class="gallery">
+          <a class="tile tall" href="https://www.instagram.com/p/DY2syqaE1Lv/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/705988625_18066040007704690_3051897537359903938_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=2ECmQOLw-NYQ7kNvwGSTaNa&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=MzkwNjUwNjEwMzAxMDA0NDc5MQ%3D%3D.3-ccb7-5&amp;oh=00_Af8Fjs_17-R1mjvPnRRhYf4GC00iW02bW3curxYNCp1INQ&amp;oe=6A28A6F1&amp;_nc_sid=8b3546" alt="Peppa Pig Cake">
+            <span>Peppa Pig Cake</span>
+          </a>
+          <a class="tile" href="https://www.instagram.com/p/DYBpd5Bkasi/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/689017396_18063190190704690_3179009316818227460_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=_VLXoZIvco0Q7kNvwGOpnq8&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg5MTU3MzkyNzAyNjIwNzUyMg%3D%3D.3-ccb7-5&amp;oh=00_Af-BrkqEb8-9G1TsIgInh5lKYhYMWu4QHOeOEVBkxo53WQ&amp;oe=6A28ADEC&amp;_nc_sid=8b3546" alt="Heart shaped baked cheesecake">
+            <span>Heart shaped baked cheesecake</span>
+          </a>
+          <a class="tile" href="https://www.instagram.com/p/DX3IfbcjDqI/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/687663309_18062638865704690_4379727536043516171_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=lTj9NQuibksQ7kNvwGQ68vY&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg4ODYxMzYzNTMyOTQxODU1NQ%3D%3D.3-ccb7-5&amp;oh=00_Af88dbj4_XFG3skWYZg1AzWjL10uOegu_nSWn1sz0cgwvA&amp;oe=6A289F29&amp;_nc_sid=8b3546" alt="Chocolate Overload Cake">
+            <span>Chocolate Overload Cake</span>
+          </a>
+          <a class="tile wide" href="https://www.instagram.com/p/DXvxdWXDLN0/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/681241676_18062252726704690_3855538141461796623_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=-FqgHXUZSFIQ7kNvwEurDuC&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg4NjU0MjQwNTcwNTEzODgzNw%3D%3D.3-ccb7-5&amp;oh=00_Af-dE-hwwfLzIqkQwuOViaif9x2_cNHJB0PRGYCq9xxYwg&amp;oe=6A28C4ED&amp;_nc_sid=8b3546" alt="Mawa Cake">
+            <span>Mawa Cake</span>
+          </a>
+          <a class="tile" href="https://www.instagram.com/p/DYPKGyPk-No/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/691263795_18063881987704690_4708962818144591058_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=hlgIrboZKkUQ7kNvwHLjJtC&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg5NTM3NjU5ODkxNjkwMTA1OA%3D%3D.3-ccb7-5&amp;oh=00_Af-BdpZALRX_dt9C433qFsa8qOASdk5UuqE-lwADXx4-Og&amp;oe=6A28C639&amp;_nc_sid=8b3546" alt="Blue and white custom cake">
+            <span>Blue and white custom cake</span>
+          </a>
+          <a class="tile" href="https://www.instagram.com/p/DYSYXk6EwqT/" target="_blank" rel="noreferrer">
+            <img src="https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/696310866_18064054958704690_1745320074210830226_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&amp;_nc_ht=instagram.fsac1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_oc=Q6cZ2gGB7cn_4lWd8oD29Sj_WIlYKsD5CDTnnoJJehsBocoSYEjpvSmHIzzP67J2cvs94fc&amp;_nc_ohc=1sYdeNFFTDsQ7kNvwEHzX54&amp;_nc_gid=GsE2axYYNaQKWVTcCIFCGg&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;ig_cache_key=Mzg5NjI4MzY4MzY2OTk0Njc0Nw%3D%3D.3-ccb7-5&amp;oh=00_Af_ktqASnCfa_zSbRPGY2nnFhsoq75SO8O0WC1UR3a8x5g&amp;oe=6A28B11E&amp;_nc_sid=8b3546" alt="Pink celebration cake">
+            <span>Pink celebration cake</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="shell">
+        <h2>Give the date, the flavour, the size, and the feeling. Samriddhi handles the cake.</h2>
+        <p>Best for birthdays, anniversaries, small gatherings, and custom orders placed at least one day prior.</p>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="shell order">
+        <div class="panel">
+          <span class="eyebrow">Order flow</span>
+          <h2>Simple enough for a quick DM. Detailed enough for a clean result.</h2>
+          <div class="steps">
+            <div class="step">
+              <b>1</b>
+              <span><strong>Pick the date.</strong>Share when you need the cake and where in Bhopal it is for.</span>
+            </div>
+            <div class="step">
+              <b>2</b>
+              <span><strong>Share the cake idea.</strong>Choose flavour, weight, colours, name, age, and a reference photo if you have one.</span>
+            </div>
+            <div class="step">
+              <b>3</b>
+              <span><strong>Confirm the design.</strong>The final quote depends on size, flavour, and decoration.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <form id="orderForm">
+            <div class="form-row">
+              <label>
+                Occasion
+                <select id="occasion" name="occasion">
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                  <option>Kids theme cake</option>
+                  <option>Cheesecake</option>
+                  <option>Gift cake</option>
+                </select>
+              </label>
+              <label>
+                Needed on
+                <input id="date" name="date" type="date">
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Flavour
+                <select id="flavour" name="flavour">
+                  <option>Chocolate overload</option>
+                  <option>Fresh cream cake</option>
+                  <option>Baked cheesecake</option>
+                  <option>Mawa cake</option>
+                  <option>Custom flavour</option>
+                </select>
+              </label>
+              <label>
+                Cake size
+                <select id="size" name="size">
+                  <option>Half kg</option>
+                  <option>One kg</option>
+                  <option>One and half kg</option>
+                  <option>Two kg</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Name, age, colours, or design notes
+              <textarea id="notes" name="notes" placeholder="Example: pastel pink Peppa Pig cake for a 4th birthday"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="button" type="submit">Write Instagram DM</button>
+              <a class="button alt" href="https://www.instagram.com/_.cakelush" target="_blank" rel="noreferrer">Open Instagram</a>
+            </div>
+            <p class="small-note">This prepares a message for Instagram. No order is sent until you send the DM yourself.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <span>Cakelush By Samriddhi. Home baked in Bhopal, Madhya Pradesh.</span>
+      <a href="https://www.instagram.com/_.cakelush" target="_blank" rel="noreferrer">@_.cakelush</a>
+    </div>
+  </footer>
+
+  <a class="button floating-order" href="#order">Order</a>
+
+  <script>
+    const localCakeImages = [
+      "assets/cake-1.svg",
+      "assets/cake-2.svg",
+      "assets/cake-3.svg",
+      "assets/cake-1.svg",
+      "assets/cake-2.svg",
+      "assets/cake-3.svg",
+      "assets/cake-4.svg",
+      "assets/cake-5.svg",
+      "assets/cake-6.svg"
+    ];
+
+    document.querySelectorAll("img").forEach((img, index) => {
+      if (localCakeImages[index]) {
+        img.src = localCakeImages[index];
+      }
+    });
+
+    document.querySelectorAll("img").forEach((img) => {
+      const markFailed = () => img.classList.add("failed");
+      img.addEventListener("error", markFailed);
+      if (img.complete && img.naturalWidth === 0) {
+        markFailed();
+      }
+      setTimeout(() => {
+        if (!img.complete || img.naturalWidth === 0) {
+          markFailed();
+        }
+      }, 1800);
+    });
+
+    const form = document.querySelector("#orderForm");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const occasion = document.querySelector("#occasion").value;
+      const date = document.querySelector("#date").value || "not fixed yet";
+      const flavour = document.querySelector("#flavour").value;
+      const size = document.querySelector("#size").value;
+      const notes = document.querySelector("#notes").value.trim() || "I will share the design reference in DM.";
+      const message = `Hi Cakelush, I want to order a cake.\nOccasion: ${occasion}\nNeeded on: ${date}\nFlavour: ${flavour}\nSize: ${size}\nDesign notes: ${notes}`;
+
+      navigator.clipboard?.writeText(message).catch(() => {});
+      window.open("https://www.instagram.com/_.cakelush", "_blank", "noreferrer");
+    });
+  </script>
+</body>
+</html>
